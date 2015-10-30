@@ -1,0 +1,20 @@
+#!/bin/sh
+CARD="${1:-0}"
+MIXER="${2:-pulse}" # use pulse for pulseaudio, default is alsa
+VOLUME="$(pulseaudio-ctl full-status | awk '{ print $1;}')"
+
+case $BLOCK_BUTTON in
+  1) pavucontrol ;; #left click, start mixer
+  3) pulseaudio-ctl mute ;; # right click, mute/unmute
+  4) pulseaudio-ctl up;;    # scroll up, increase
+  5) pulseaudio-ctl down ;;    # scroll down, decrease
+esac
+
+echo " $VOLUME%"
+echo
+
+MUTED="$(pulseaudio-ctl full-status | awk '{ print $2;}')"
+if [ "$MUTED" == "yes" ]; then
+	echo \#ed6b6b
+fi
+

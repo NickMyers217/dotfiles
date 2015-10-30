@@ -15,7 +15,9 @@
 ! ░░░░░░░░░░
 !
 ! █▓▒░ fonts
+
 urxvt*font: xft:gohufont:size=11:antialias=true
+!urxvt*font: xft:ohsnap:size=12:antialias=true
 !urxvt*font: xft:creep:size=16:antialias=true
 !urxvt*font: xft:envy code r:size=9:antialias=false
 !urxvt*font: xft:lemon:size=16:antialias=false
@@ -23,13 +25,16 @@ urxvt*font: xft:gohufont:size=11:antialias=true
 !urxvt*font: xft:neep:size=11:antialias=false
 !urxvt*font: xft:perfect dos vga 437:size=11:antialias=false
 !urxvt*font: xft:tewi:size=11:antialias=false
+!urxvt*font: xft:uushi:size=11:antialias=true
 
 urxvt*boldFont: 
 urxvt*italicFont: 
 urxvt*bolditalicFont: 
 
-urxvt*letterSpace: 0
+urxvt*letterSpace: -0.75
 urxvt*lineSpace: -1
+
+urxvt*cursorBlink: 1
 
 ! █▓▒░ interface
 urxvt*scrollBar: false
@@ -51,7 +56,9 @@ urxvt*transparent: false
 ! █▓▒░ scorcerer colors
 *.foreground:   #c2c2b0
 *.background:   #222222
-*.cursorColor:  #c2c2b0
+!*.cursorColor:  #c2c2b0
+*.cursorColor:  #528b8b
+
 ! black
 *.color0:       #222222
 *.color8:       #272822

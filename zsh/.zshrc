@@ -15,4 +15,5 @@
 # ░░░░░░░░░░
 #
 #█▓▒░ load configs
+screenfetch -D 'Arch'
 for config (~/.zsh/*.zsh) source $config
