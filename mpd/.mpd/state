@@ -1,9 +1,9 @@
-sw_volume: 74
+sw_volume: 6
 audio_device_state:1:audio
 audio_device_state:1:visualizer
-state: pause
-current: 0
-time: 254.164000
+state: play
+current: 8
+time: 93.947000
 random: 1
 repeat: 1
 single: 0
@@ -12,183 +12,76 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:MyBUddiesHateme.wav
-1:Amon Amarth/With Oden On Our Side/01 - Valhall Awaits Me.mp3
-2:Amon Amarth/With Oden On Our Side/02 - Runes To My Memory.mp3
-3:Amon Amarth/With Oden On Our Side/03 - Asator.mp3
-4:Amon Amarth/With Oden On Our Side/04 - Hermod's Ride To Hel Lokes Treachery Part 1.mp3
-5:Amon Amarth/With Oden On Our Side/05 - Gods Of War Arise.mp3
-6:Amon Amarth/With Oden On Our Side/06 - With Oden On Our Side.mp3
-7:Amon Amarth/With Oden On Our Side/07 - Cry Of The Black Birds.mp3
-8:Amon Amarth/With Oden On Our Side/08 - Under The Northern Star.mp3
-9:Amon Amarth/With Oden On Our Side/09 - Prediction Of Warfare.mp3
-10:Aspherium/The Fall of Therenia/01 The Fall of Therenia.mp3
-11:Aspherium/The Fall of Therenia/02 The Revenant.mp3
-12:Aspherium/The Fall of Therenia/03 Broken Beauty.mp3
-13:Aspherium/The Fall of Therenia/04 Guardians of the Gates.mp3
-14:Aspherium/The Fall of Therenia/05 City of Stone.mp3
-15:Aspherium/The Fall of Therenia/06 Regret and Eternal Sorrow.mp3
-16:Aspherium/The Fall of Therenia/07 Warden of Eons.mp3
-17:Aspherium/The Fall of Therenia/08 Landfall.mp3
-18:Aspherium/The Fall of Therenia/09 As We Light Up the Sky.mp3
-19:Aspherium/The Fall of Therenia/10 Reality Unfolds.mp3
-20:Aspherium/The Veil Of Serenity/01 The Veil Of Serenity.mp3
-21:Aspherium/The Veil Of Serenity/02 Rising From The Shadows.mp3
-22:Aspherium/The Veil Of Serenity/03 The Revelator.mp3
-23:Aspherium/The Veil Of Serenity/04 Dawn Of Apocalypse Rising.mp3
-24:Aspherium/The Veil Of Serenity/05 As We Slither.mp3
-25:Aspherium/The Veil Of Serenity/06 Blackpoint Millennium.mp3
-26:Aspherium/The Veil Of Serenity/07 Vanguard Of The Great Journey.mp3
-27:Aspherium/The Veil Of Serenity/08 Between The Fire And The Rain.mp3
-28:Aspherium/The Veil Of Serenity/09 Fury Of The Flesh.mp3
-29:Insomnium/Above the Weeping World/01 The Gale.mp3
-30:Insomnium/Above the Weeping World/02 Mortal Share.mp3
-31:Insomnium/Above the Weeping World/03 Drawn to Black.mp3
-32:Insomnium/Above the Weeping World/04 Change of Heart.mp3
-33:Insomnium/Above the Weeping World/05 At the Gates of Sleep.mp3
-34:Insomnium/Above the Weeping World/06 The Killjoy.mp3
-35:Insomnium/Above the Weeping World/07 Last Statement.mp3
-36:Insomnium/Above the Weeping World/08 Devoid of Caring.mp3
-37:Insomnium/Above the Weeping World/09 In the Groves of Death.mp3
-38:Insomnium/In The Halls of Awaiting/01 Ill-Starred Son.mp3
-39:Insomnium/In The Halls of Awaiting/02 Song of the Storm.mp3
-40:Insomnium/In The Halls of Awaiting/03 Medela.mp3
-41:Insomnium/In The Halls of Awaiting/04 Dying Chant.mp3
-42:Insomnium/In The Halls of Awaiting/05 The Elder.mp3
-43:Insomnium/In The Halls of Awaiting/06 Black Waters.mp3
-44:Insomnium/In The Halls of Awaiting/07 Shades of Deep Green.mp3
-45:Insomnium/In The Halls of Awaiting/08 The Bitter End.mp3
-46:Insomnium/In The Halls of Awaiting/09 Journey Unkown.mp3
-47:Insomnium/In The Halls of Awaiting/10 In the Halls of Awaiting.mp3
-48:Insomnium/Since the Day All Came Down/01 Nocturne.mp3
-49:Insomnium/Since the Day All Came Down/02 The Day It All Came Down.mp3
-50:Insomnium/Since the Day All Came Down/03 Daughter of the Moon.mp3
-51:Insomnium/Since the Day All Came Down/04 The Moment of Reckoning.mp3
-52:Insomnium/Since the Day All Came Down/05 Bereavement.mp3
-53:Insomnium/Since the Day All Came Down/06 Under the Plaintive Sky.mp3
-54:Insomnium/Since the Day All Came Down/07 Resonance.mp3
-55:Insomnium/Since the Day All Came Down/08 Death Walked the Earth.mp3
-56:Insomnium/Since the Day All Came Down/09 Disengagement.mp3
-57:Insomnium/Since the Day All Came Down/10 Closing Words.mp3
-58:Insomnium/Since the Day All Came Down/11 Song of the Forlorn Son.mp3
-59:Dark Tranquillity/Character/01 The New Build.mp3
-60:Dark Tranquillity/Character/02 Through Smudged Lenses.mp3
-61:Dark Tranquillity/Character/03 Out of Nothing.mp3
-62:Dark Tranquillity/Character/04 The Endless Feed.mp3
-63:Dark Tranquillity/Character/05 Lost to Apathy.mp3
-64:Dark Tranquillity/Character/06 Mind Matters.mp3
-65:Dark Tranquillity/Character/07 One Thought.mp3
-66:Dark Tranquillity/Character/08 Dry Run.mp3
-67:Dark Tranquillity/Character/09 Am I 1_.mp3
-68:Dark Tranquillity/Character/10 Senses Tied.mp3
-69:Dark Tranquillity/Character/11 My Negation.mp3
-70:Dark Tranquillity/Damage Done/01 Final Resistance.mp3
-71:Dark Tranquillity/Damage Done/02 Hours Passed In Exile.mp3
-72:Dark Tranquillity/Damage Done/03 Monochromatic Stains.mp3
-73:Dark Tranquillity/Damage Done/04 Single Part of Two.mp3
-74:Dark Tranquillity/Damage Done/05 The Treason Wall.mp3
-75:Dark Tranquillity/Damage Done/06 Format C_ for Cortex.mp3
-76:Dark Tranquillity/Damage Done/07 Damage Done.mp3
-77:Dark Tranquillity/Damage Done/08 Cathode Ray Sunshine.mp3
-78:Dark Tranquillity/Damage Done/09 The Enemy.mp3
-79:Dark Tranquillity/Damage Done/10 White Noise _ Black Silence.mp3
-80:Dark Tranquillity/Damage Done/11 Ex Nihilo.mp3
-81:Dark Tranquillity/Damage Done/12 I_ Deception.mp3
-82:Dark Tranquillity/Damage Done/13 Static.mp3
-83:Dark Tranquillity/Damage Done/14 The Poison Well.mp3
-84:Dark Tranquillity/Damage Done/15 The Treason Wall (Live).mp3
-85:Dark Tranquillity/Fiction/01 Nothing To No One.mp3
-86:Dark Tranquillity/Fiction/02 The Lesser Faith.mp3
-87:Dark Tranquillity/Fiction/03 Terminus (Where Death is Most.mp3
-88:Dark Tranquillity/Fiction/04 Blind At Heart.mp3
-89:Dark Tranquillity/Fiction/05 Icipher.mp3
-90:Dark Tranquillity/Fiction/06 Inside The Particle Storm.mp3
-91:Dark Tranquillity/Fiction/07 Empty Me.mp3
-92:Dark Tranquillity/Fiction/08 Misery's Crown.mp3
-93:Dark Tranquillity/Fiction/09 Focus Shift.mp3
-94:Dark Tranquillity/Fiction/10 The Mundane and the Magic.mp3
-95:Sithu Aye/Cassini/01 Pillars of Creation.mp3
-96:Sithu Aye/Cassini/02 Orion.mp3
-97:Sithu Aye/Cassini/03 Cassini.mp3
-98:Sithu Aye/Cassini/04 Messier Object.mp3
-99:Sithu Aye/Cassini/05 Double Helix.mp3
-100:Sithu Aye/Cassini/06 Dirac Sea.mp3
-101:Sithu Aye/Cassini/07 Multiverse Part I_ Origin.mp3
-102:Sithu Aye/Cassini/08 Multiverse Part II_ Divergence.mp3
-103:Sithu Aye/Cassini/09 Multiverse Part III_ Alternate.mp3
-104:Sithu Aye/Invent the Universe/01 Invent the Universe.mp3
-105:Sithu Aye/Invent the Universe/02 Grand Unification (feat_ David.mp3
-106:Sithu Aye/Invent the Universe/03 Expansion.mp3
-107:Sithu Aye/Invent the Universe/04 Baryogenesis.mp3
-108:Sithu Aye/Invent the Universe/05 Particles Collide (feat_ Plini.mp3
-109:Sithu Aye/Invent the Universe/06 Nucleosynthesis (Interlude).mp3
-110:Sithu Aye/Invent the Universe/07 Recombination.mp3
-111:Sithu Aye/Invent the Universe/08 Dark Ages.mp3
-112:Sithu Aye/Invent the Universe/09 Formation.mp3
-113:Sithu Aye/Invent the Universe/10 Pale Blue Dot.mp3
-114:Sithu Aye/Isles EP/01 Isles.mp3
-115:Sithu Aye/Isles EP/02 Skye.mp3
-116:Sithu Aye/Isles EP/03 Islay.mp3
-117:Sithu Aye/Isles EP/04 Cuillin (Interlude).mp3
-118:Sithu Aye/Isles EP/05 Mull.mp3
-119:Sithu Aye/Isles EP/06 Jura.mp3
-120:Sithu Aye/Isles EP/07 Arrow _ Knee = Adventure Over.mp3
-121:Sithu Aye/Pulse/01 Pulse Part I (feat_ Plini).mp3
-122:Sithu Aye/Pulse/02 Messenger (feat_ Aaron Marshal.mp3
-123:Sithu Aye/Pulse/03 Shiny.mp3
-124:Sithu Aye/Pulse/04 Lights! Camera! Explosions!.mp3
-125:Sithu Aye/Pulse/05 Pulse Part II.mp3
-126:Sithu Aye/Cassini/01 Pillars of Creation.mp3
-127:Sithu Aye/Cassini/02 Orion.mp3
-128:Sithu Aye/Cassini/03 Cassini.mp3
-129:Sithu Aye/Cassini/04 Messier Object.mp3
-130:Sithu Aye/Cassini/05 Double Helix.mp3
-131:Sithu Aye/Cassini/06 Dirac Sea.mp3
-132:Sithu Aye/Cassini/07 Multiverse Part I_ Origin.mp3
-133:Sithu Aye/Cassini/08 Multiverse Part II_ Divergence.mp3
-134:Sithu Aye/Cassini/09 Multiverse Part III_ Alternate.mp3
-135:Sithu Aye/Invent the Universe/01 Invent the Universe.mp3
-136:Sithu Aye/Invent the Universe/02 Grand Unification (feat_ David.mp3
-137:Sithu Aye/Invent the Universe/03 Expansion.mp3
-138:Sithu Aye/Invent the Universe/04 Baryogenesis.mp3
-139:Sithu Aye/Invent the Universe/05 Particles Collide (feat_ Plini.mp3
-140:Sithu Aye/Invent the Universe/06 Nucleosynthesis (Interlude).mp3
-141:Sithu Aye/Invent the Universe/07 Recombination.mp3
-142:Sithu Aye/Invent the Universe/08 Dark Ages.mp3
-143:Sithu Aye/Invent the Universe/09 Formation.mp3
-144:Sithu Aye/Invent the Universe/10 Pale Blue Dot.mp3
-145:Sithu Aye/Isles EP/01 Isles.mp3
-146:Sithu Aye/Isles EP/02 Skye.mp3
-147:Sithu Aye/Isles EP/03 Islay.mp3
-148:Sithu Aye/Isles EP/04 Cuillin (Interlude).mp3
-149:Sithu Aye/Isles EP/05 Mull.mp3
-150:Sithu Aye/Isles EP/06 Jura.mp3
-151:Sithu Aye/Isles EP/07 Arrow _ Knee = Adventure Over.mp3
-152:Sithu Aye/Oceania/Sithu Aye - Oceania - 01 Oceania.mp3
-153:Sithu Aye/Pulse/01 Pulse Part I (feat_ Plini).mp3
-154:Sithu Aye/Pulse/02 Messenger (feat_ Aaron Marshal.mp3
-155:Sithu Aye/Pulse/03 Shiny.mp3
-156:Sithu Aye/Pulse/04 Lights! Camera! Explosions!.mp3
-157:Sithu Aye/Pulse/05 Pulse Part II.mp3
-158:Omnium Gatherum/Beyond/01 Luoto.mp3
-159:Omnium Gatherum/Beyond/02 New Dynamic.mp3
-160:Omnium Gatherum/Beyond/03 In the Rim.mp3
-161:Omnium Gatherum/Beyond/04 Nightwalkers.mp3
-162:Omnium Gatherum/Beyond/05 Formidable.mp3
-163:Omnium Gatherum/Beyond/06 The Sonic Sign.mp3
-164:Omnium Gatherum/Beyond/07 Who Could Say.mp3
-165:Omnium Gatherum/Beyond/08 The Unknowing.mp3
-166:Omnium Gatherum/Beyond/09 Living in Me.mp3
-167:Omnium Gatherum/Beyond/10 White Palace.mp3
-168:Omnium Gatherum/Beyond/11 Subdivisions (Bonus Track).mp3
-169:Omnium Gatherum/New World Shadows/01 Everfields.mp3
-170:Omnium Gatherum/New World Shadows/02 Ego.mp3
-171:Omnium Gatherum/New World Shadows/03 New World Shadows.mp3
-172:Omnium Gatherum/New World Shadows/04 Soul Journeys.mp3
-173:Omnium Gatherum/New World Shadows/05 Nova Flame.mp3
-174:Omnium Gatherum/New World Shadows/06 An Infinite Mind.mp3
-175:Omnium Gatherum/New World Shadows/07 Watcher Of The Skies.mp3
-176:Omnium Gatherum/New World Shadows/08 The Distance.mp3
-177:Omnium Gatherum/New World Shadows/09 Deep Cold.mp3
-178:Sithu Aye/Oceania/Sithu Aye - Oceania - 01 Oceania.mp3
+0:Insomnium/In The Halls of Awaiting/01 - Ill-Starred Son.mp3
+1:Insomnium/In The Halls of Awaiting/02 - Song of the Storm.mp3
+2:Insomnium/In The Halls of Awaiting/03 - Medela.mp3
+3:Insomnium/In The Halls of Awaiting/04 - Dying Chant.mp3
+4:Insomnium/In The Halls of Awaiting/05 - The Elder.mp3
+5:Insomnium/In The Halls of Awaiting/06 - Black Waters.mp3
+6:Insomnium/In The Halls of Awaiting/07 - Shades of Deep Green.mp3
+7:Insomnium/In The Halls of Awaiting/08 - The Bitter End.mp3
+8:Insomnium/In The Halls of Awaiting/09 - Journey Unkown.mp3
+9:Insomnium/In The Halls of Awaiting/10 - In the Halls of Awaiting.mp3
+10:Insomnium/Since the Day All Came Down/01 - Nocturne.mp3
+11:Insomnium/Since the Day All Came Down/02 - The Day It All Came Down.mp3
+12:Insomnium/Since the Day All Came Down/03 - Daughter of the Moon.mp3
+13:Insomnium/Since the Day All Came Down/04 - The Moment of Reckoning.mp3
+14:Insomnium/Since the Day All Came Down/05 - Bereavement.mp3
+15:Insomnium/Since the Day All Came Down/06 - Under the Plaintive Sky.mp3
+16:Insomnium/Since the Day All Came Down/07 - Resonance.mp3
+17:Insomnium/Since the Day All Came Down/08 - Death Walked the Earth.mp3
+18:Insomnium/Since the Day All Came Down/09 - Disengagement.mp3
+19:Insomnium/Since the Day All Came Down/10 - Closing Words.mp3
+20:Insomnium/Since the Day All Came Down/11 - Song of the Forlorn Son.mp3
+21:Dark Tranquillity/Fiction/01 - Nothing To No One.mp3
+22:Dark Tranquillity/Fiction/02 - The Lesser Faith.mp3
+23:Dark Tranquillity/Fiction/03 - Terminus (Where Death is Most Alive).mp3
+24:Dark Tranquillity/Fiction/04 - Blind At Heart.mp3
+25:Dark Tranquillity/Fiction/05 - Icipher.mp3
+26:Dark Tranquillity/Fiction/06 - Inside The Particle Storm.mp3
+27:Dark Tranquillity/Fiction/07 - Empty Me.mp3
+28:Dark Tranquillity/Fiction/08 - Misery's Crown.mp3
+29:Dark Tranquillity/Fiction/09 - Focus Shift.mp3
+30:Dark Tranquillity/Fiction/10 - The Mundane and the Magic.mp3
+31:Feared/Synder/01 - Synder.mp3
+32:Feared/Synder/02 - Your Demise.mp3
+33:Feared/Synder/03 - Of Iron and Ashes.mp3
+34:Feared/Synder/04 - Caligula.mp3
+35:Feared/Synder/05 - My Grief, My Sorrow.mp3
+36:Feared/Synder/06 - Dygder.mp3
+37:Feared/Synder/07 - By Silent Screaming.mp3
+38:Feared/Synder/08 - Wolf At the End of the World.mp3
+39:Feared/Synder/09 - My Own Redemption.mp3
+40:Feared/Synder/10 - Dying Day.mp3
+41:Feared/Synder/11 - War Feeding War.mp3
+42:Feared/Synder/12 - The Narcissist.mp3
+43:Feared/Synder/13 - Godless Devotion.mp3
+44:Feared/Synder/01 - Synder (Instrumental).mp3
+45:Feared/Synder/02 - Your Demise (Instrumental).mp3
+46:Feared/Synder/03 - Of Iron and Ashes (Instrumental).mp3
+47:Feared/Synder/04 - Caligula (Instrumental).mp3
+48:Feared/Synder/05 - My Grief, My Sorrow (Instrumental).mp3
+49:Feared/Synder/06 - Dygder (Instrumental).mp3
+50:Feared/Synder/07 - By Silent Screaming (Instrumental).mp3
+51:Feared/Synder/08 - Wolf At the End of the World (Instrumental).mp3
+52:Feared/Synder/09 - My Own Redemption (Instrumental).mp3
+53:Feared/Synder/10 - Dying Day (Instrumental).mp3
+54:Feared/Synder/11 - War Feeding War (Instrumental).mp3
+55:Feared/Synder/12 - The Narcissist (Instrumental).mp3
+56:Feared/Synder/13 - Godless Devotion (Instrumental).mp3
+57:In Flames/Whoracle/01 - Jotun.mp3
+58:In Flames/Whoracle/02 - Food for the Gods.mp3
+59:In Flames/Whoracle/03 - Gyroscope.mp3
+60:In Flames/Whoracle/04 - Dialogue With the Stars.mp3
+61:In Flames/Whoracle/05 - The Hive.mp3
+62:In Flames/Whoracle/06 - Jester Script Transfigured.mp3
+63:In Flames/Whoracle/07 - Morphing Into Primal.mp3
+64:In Flames/Whoracle/08 - Worlds Within the Margin.mp3
+65:In Flames/Whoracle/09 - Episode 666.mp3
+66:In Flames/Whoracle/10 - Everything Counts.mp3
+67:In Flames/Whoracle/11 - Whoracle.mp3
+68:In Flames/Whoracle/12 - Goliaths Disarm Their Davids (From Black Ash EP).mp3
+69:In Flames/Whoracle/13 - Jotun (Live at Sticky Fingers).mp3
+70:In Flames/Whoracle/14 - Food for the Goods (Live at Sticky Fingers).mp3
+71:Sithu Aye/Oceania/Sithu Aye - Oceania - 01 Oceania.flac
 playlist_end

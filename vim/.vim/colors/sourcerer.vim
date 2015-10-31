@@ -1,11 +1,3 @@
-"   ██████  ██████  ██   ██ ██████  █████   █████  ██████  █████  ██████
-"  ██░░░░  ██░░░░██░██  ░██░░██░░████░░░██ ██░░░██░░██░░████░░░██░░██░░██
-" ░░█████ ░██   ░██░██  ░██ ░██ ░░░██  ░░ ░███████ ░██ ░░░███████ ░██ ░░
-"  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░██   ░██░░░░  ░██   
-"  ██████ ░░██████ ░░██████░███   ░░█████ ░░██████░███   ░░██████░███   
-" ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░     ░░░░░░ ░░░   
-"  r  e  a  d     c  o  d  e     l  i  k  e     a     w  i  z  a  r  d 
-"
 " sourcerer by xero harrison (http://xero.nu)
 "  ├─ based on sorcerer by Jeet Sukumaran (http://jeetworks.org)
 "  └─ based on mustang by Henrique C. Alves (hcarvalhoalves@gmail.com)
@@ -207,4 +199,3 @@ hi iCursor                cterm=NONE             ctermbg=210   ctermfg=16
 hi lCursor                cterm=NONE             ctermbg=145   ctermfg=234
 hi nCursor                cterm=NONE             ctermbg=NONE  ctermfg=145
 hi vCursor                cterm=NONE             ctermbg=201   ctermfg=16
-

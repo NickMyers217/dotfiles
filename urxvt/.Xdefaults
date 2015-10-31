@@ -16,7 +16,7 @@
 !
 ! █▓▒░ fonts
 
-urxvt*font: xft:gohufont:size=11:antialias=true
+urxvt*font: xft:gohufont:size=13:antialias=true
 !urxvt*font: xft:ohsnap:size=12:antialias=true
 !urxvt*font: xft:creep:size=16:antialias=true
 !urxvt*font: xft:envy code r:size=9:antialias=false

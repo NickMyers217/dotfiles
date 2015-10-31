@@ -1,0 +1,5 @@
+#install them like this
+#then reload the cache or reboot
+xset fp+ $HOME/.fonts/misc
+xset fp+ $HOME/.fonts/ohsnap
+xset fp+ $HOME/.fonts/terminesspowerline

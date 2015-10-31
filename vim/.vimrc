@@ -39,7 +39,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
-Plugin 'https://github.com/eagletmt/neco-ghc'
 
 " Highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -73,7 +72,6 @@ let g:ctrlp_wokring_path_mode = 'rw'
 "" YCM syntax config file for C/C++ projects
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:clang_user_options = ' -DCLANG_COMPLETE_ONLY'
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " syntatic http://git.io/syntastic.vim
 " linters: (from aur) nodejs-jshint, nodejs-jsonlint, csslint, checkbashisms
@@ -181,7 +179,7 @@ nnoremap <C-O> :TagbarToggle
 " █▓▒░ wizard status line
 set laststatus=2
 let g:lightline = {
-			\ 'colorscheme': 'sourcerer',
+			\ 'colorscheme': 'jellybeans',
 			\ 'active': {
 			\   'left': [ [ 'filename' ],
 			\             [ 'readonly', 'fugitive' ] ],
