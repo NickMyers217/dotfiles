@@ -3,9 +3,6 @@
 #
 
 alt + super + Escape
-	pkill panel; \
-	pkill panel_bar; \
-	mpd --kill; \
 	bspc quit
 
 alt + q
@@ -88,10 +85,10 @@ alt + {minus,equal}
 #
 
 alt + Return
-	urxvt
+	termite
 
 alt + d
-	my_dmenu.sh
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 alt + Escape

@@ -39,6 +39,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
+Plugin 'isRuslan/vim-es6'
 
 " Highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -79,6 +80,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 highlight SyntasticErrorSign ctermfg=red ctermbg=237
 highlight SyntasticWarningSign ctermfg=yellow ctermbg=237
 highlight SyntasticStyleErrorSign ctermfg=red ctermbg=237
@@ -119,7 +121,6 @@ set hlsearch
 set ignorecase
 set smartcase
 set backspace=indent,eol,start
-set autoindent
 set nostartofline
 set ruler
 set laststatus=2
@@ -141,12 +142,13 @@ set noswapfile
 set shiftwidth=4
 set tabstop=4
 set list
+"set autoindent
 "set listchars=eol:¬,extends:…,precedes:…,tab:\ \ 
 set listchars=eol:\ ,extends:…,precedes:…,tab:\ \ 
 
 "" Filetype specific indentation preferences
-autocmd FileType c set shiftwidth=4|set tabstop=4
-autocmd FileType cpp set shiftwidth=4|set tabstop=4
+autocmd FileType c set shiftwidth=4|set tabstop=4|set expandtab
+autocmd FileType cpp set shiftwidth=4|set tabstop=4|set expandtab
 autocmd FileType glsl set shiftwidth=4|set tabstop=4
 autocmd FileType javascript set shiftwidth=4|set tabstop=4
 au FileType haskell setl sw=4 ts=8 sts=4 et shiftround
@@ -167,9 +169,9 @@ nnoremap <C-G> :YcmCompleter GoToDeclaration
 nnoremap <C-O> :TagbarToggle
 
 " Copy and paste with <leader> y and <leader> p
-"vnoremap <silent> <leader>y :w !xsel -i -b<CR>
+vnoremap <silent> <leader>y :w !xsel -i -b<CR>
 "nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
-"nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
+nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
 
 
 " ┏━┓╺┳╸┏━┓╺┳╸╻ ╻┏━┓╻  ╻┏┓╻┏━╸
