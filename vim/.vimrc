@@ -63,6 +63,10 @@ Plugin 'https://github.com/nanotech/jellybeans.vim'
 Plugin 'https://github.com/djjcast/mirodark'
 Plugin 'https://github.com/vim-scripts/BusyBee'
 Plugin 'https://github.com/nickmyers217/vim_colors'
+Plugin 'https://github.com/vim-scripts/xoria256.vim'
+Plugin 'https://github.com/guns/jellyx.vim'
+Plugin 'https://github.com/vim-scripts/navajo-night'
+Plugin 'https://github.com/w0ng/vim-hybrid'
 
 call vundle#end()
 
@@ -109,8 +113,7 @@ highlight GitGutterChangeDelete ctermfg=red ctermbg=237
 
 " Settings
 set t_Co=256
-"colorscheme sourcerer
-colorscheme atom-dark-256
+colorscheme tHybrid
 filetype indent plugin on
 syntax enable
 filetype on
@@ -181,7 +184,6 @@ nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
 " █▓▒░ wizard status line
 set laststatus=2
 let g:lightline = {
-			\ 'colorscheme': 'jellybeans',
 			\ 'active': {
 			\   'left': [ [ 'filename' ],
 			\             [ 'readonly', 'fugitive' ] ],
