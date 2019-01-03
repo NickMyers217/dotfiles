@@ -4,17 +4,11 @@ allow_bold = true
 audible_bell = false
 browser = xdg-open
 clickable_url = true
-cursor_blink = true
+cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Monaco for Powerline 10
-#font = xos4 Terminus Medium 12
-#font = Anonymice Nerd Font 12
-#font = BitstreamVeraSansMono Nerd Font 10
-#font = FuraMono Nerd Font Mono 10
-#font = GohuFont Nerd Font Mono 10
-#font = Liberation Mono 10
+font = Monospace 13
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -33,7 +27,7 @@ urgent_on_bell = true
 #background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f
-padding = 4
+#padding = 2
 #border = #3f3f3f
 #border_width = 10
 #roundness = 2.0
@@ -42,7 +36,7 @@ padding = 4
 #### You can change the color coding to your liking
 #### There is a folder themes in ~/config/termite/themes
 #### Copy/paste the colors from one of the 79+ templates to this one
-#### A backup of the original config termite is present
+#### A backup of the original config termite is present  
 ############################################################
 #### Use websites to make the terminal your own
 #### https://terminal.sexy
@@ -50,51 +44,46 @@ padding = 4
 ############################################################
 
 [colors]
-# Base16 Tomorrow Night
-# Author: Chris Kempson (http://chriskempson.com)
+# https://critical.ch/xterm/
+#dracula theme adapted by Erik Dubois
+background = rgba(40, 42, 54, 0.8)
 
-foreground      = #c5c8c6
-foreground_bold = #e0e0e0
-cursor          = #e0e0e0
-#background      = #1d1f21
-background = rgba(29, 31, 33, 0.8)
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+#background      = #282a36
 
-# 16 color space
+# black
+color0  = #000000
+color8  = #79A9FF
 
-# Black, Gray, Silver, White
-color0  = #1d1f21
-color8  = #969896
-color7  = #c5c8c6
-color15 = #ffffff
+# red
+color1  = #ff5555
+color9  = #ff6e67
 
-# Red
-color1  = #cc6666
-color9  = #cc6666
+# green
+color2  = #50fa7b
+color10 = #5af78e
 
-# Green
-color2  = #b5bd68
-color10 = #b5bd68
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
 
-# Yellow
-color3  = #f0c674
-color11 = #f0c674
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
 
-# Blue
-color4  = #81a2be
-color12 = #81a2be
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
 
-# Purple
-color5  = #b294bb
-color13 = #b294bb
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
 
-# Teal
-color6  = #8abeb7
-color14 = #8abeb7
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
 
-# Extra colors
-color16 = #de935f
-color17 = #a3685a
-color18 = #282a2e
-color19 = #373b41
-color20 = #b4b7b4
-color21 = #e0e0e0
+
