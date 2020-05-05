@@ -8,13 +8,6 @@ cursor_blink = true
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Monaco for Powerline 10
-#font = xos4 Terminus Medium 12
-#font = Anonymice Nerd Font 12
-#font = BitstreamVeraSansMono Nerd Font 10
-#font = FuraMono Nerd Font Mono 10
-#font = GohuFont Nerd Font Mono 10
-#font = Liberation Mono 10
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -28,12 +21,19 @@ search_wrap = true
 urgent_on_bell = true
 
 [hints]
-#font = Monospace 12
+font =  SauceCodePro Nerd Font Mono 11
+#font = FantasqueSansMono 12
+#font = Monaco for Powerline 10
+#font = xos4 Terminus Medium 12
+#font = Anonymice Nerd Font 12
+#font = BitstreamVeraSansMono Nerd Font 10
+#font = FuraMono Nerd Font Mono 10
+#font = GohuFont Nerd Font Mono 10
 #foreground = #dcdccc
 #background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f
-padding = 4
+#padding = 4
 #border = #3f3f3f
 #border_width = 10
 #roundness = 2.0
@@ -55,9 +55,8 @@ padding = 4
 
 foreground      = #c5c8c6
 foreground_bold = #e0e0e0
-cursor          = #e0e0e0
-#background      = #1d1f21
-background = rgba(29, 31, 33, 0.8)
+cursor          = #cc6666
+background      = rgba(29, 31, 33, 0.8)
 
 # 16 color space
 
