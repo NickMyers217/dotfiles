@@ -19,16 +19,16 @@ scrollback_lines = 15000
 size_hints = false
 search_wrap = true
 urgent_on_bell = true
-
-[hints]
-font =  SauceCodePro Nerd Font Mono 11
-#font = FantasqueSansMono 12
+font = FantasqueSansMono Nerd Font Mono 11
+#font = SauceCodePro Nerd Font Mono 11
 #font = Monaco for Powerline 10
 #font = xos4 Terminus Medium 12
 #font = Anonymice Nerd Font 12
 #font = BitstreamVeraSansMono Nerd Font 10
 #font = FuraMono Nerd Font Mono 10
 #font = GohuFont Nerd Font Mono 10
+
+[hints]
 #foreground = #dcdccc
 #background = #3f3f3f
 #active_foreground = #e68080
@@ -56,7 +56,7 @@ font =  SauceCodePro Nerd Font Mono 11
 foreground      = #c5c8c6
 foreground_bold = #e0e0e0
 cursor          = #cc6666
-background      = rgba(29, 31, 33, 0.8)
+background      = rgba(29, 31, 33, 0.95)
 
 # 16 color space
 
