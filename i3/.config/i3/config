@@ -7,9 +7,8 @@ bindsym Mod1+t exec exec termite -d ~ -t "file browser" -e ranger
 bindsym Mod1+p exec exec termite -t "system monitor" -e gtop
 bindsym Mod1+o exec exec termite -t "task manager" -e htop
 
-# You need i3 gaps for this
-#gaps inner 20
-#gaps outer 5
+gaps inner 20
+gaps outer 5
 
 set $left h
 set $down j

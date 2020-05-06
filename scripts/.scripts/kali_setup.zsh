@@ -7,10 +7,8 @@ cd
 sudo apt update
 sudo apt upgrade
 
-# Install git and neovim so we can clone and edit things, also manuals
-sudo apt install git neovim man
-
-# TODO: can i install lazygit here?
+# Install some very basic stuff for the tasks ahead
+sudo apt install xterm git neovim man
 
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
@@ -41,14 +39,14 @@ stow ranger
 sudo apt install ranger
 cd
 
-# TODO: lets get i3-gaps instead
 # Configure the window manager (i3) and its related programs
 cd ~/dotfiles
 stow X
 stow polybar
 stow i3
-sudo apt install x11-apps polybar rofi hsetroot feh compton i3
 cd
+sudo apt install x11-apps polybar rofi hsetroot feh compton
+sh ~/.scripts/install_i3gaps.sh # This script will build i3-gaps from source
 
 ### NOTE:
 ###   - At this point you want to go ahead and start your xserver from windows
@@ -58,7 +56,6 @@ cd
 ###   - In my case though, I'm going to do both these from windows with this script named wsl.vbs
 ###
 ### ' This script is meant to be launched from the Windows side, to start up a x410 container
-### 
 ### Set shell = CreateObject("WScript.Shell" ) 
 ### shell.Run """x410.exe"""
 ### shell.Run "kali -c ""~/.scripts/wlaunch""", 0
@@ -116,6 +113,8 @@ curl -sLf https://spacevim.org/install.sh | bash
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
 #echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
 #sudo apt update && sudo apt install codium
+
+# TODO: can i install lazygit here?
 
 # Do a final upgrade and clean up
 sudo apt update
