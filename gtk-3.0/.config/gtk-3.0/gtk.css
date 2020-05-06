@@ -1,0 +1,5 @@
+/* This removes the weird padding in termite */
+.termite {
+  margin: 0px;
+  padding: 0px;
+}

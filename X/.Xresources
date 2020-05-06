@@ -46,3 +46,8 @@ rofi.dpi:                            150
 !rofi.kb-row-right:                   Control+Page_Down,Control+Right
 !rofi.kb-row-up:                      Up,Control+p,Shift+Tab,Control+Up
 !rofi.kb-row-down:                    Down,Control+n,Control+Down
+
+xterm*selectToClipboard: true
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)

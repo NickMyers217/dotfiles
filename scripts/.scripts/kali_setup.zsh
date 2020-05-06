@@ -10,6 +10,8 @@ sudo apt upgrade
 # Install git and neovim so we can clone and edit things, also manuals
 sudo apt install git neovim man
 
+# TODO: can i install lazygit here?
+
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
 
@@ -39,8 +41,8 @@ stow ranger
 sudo apt install ranger
 cd
 
-# NOTE: Now we prepare to switch from the command line to xserver
-# Configure window manager (i3)
+# TODO: lets get i3-gaps instead
+# Configure the window manager (i3) and its related programs
 cd dotfiles
 stow X
 stow polybar
@@ -63,9 +65,11 @@ cd
 ###
 ###   - After you get the xserver and window manager running you can continue on
 
+# TODO: I want to replace this with alacritty instead
 # Configure a better terminal emulator (I'm going to use termite)
 cd dotfiles
 stow termite
+stow gtk-3.0
 cd
 # NOTE: this installation process always seems to have issues, so keep a close eye on it and run commands manually if needed
 sh ~/.scripts/install_termite.sh 
@@ -84,11 +88,9 @@ chsh -s $(which zsh)
 zsh # NOTE: this will be the default on next login
 # NOTE: at this point you might want to restart and tinker with .zpreztorc (i change to pure theme and turn on auto complete)
 
-# Configure gtop
+# Configure node, npm stuff, and gtop
 sudo apt install nodejs npm # get coffee here...
 sudo npm install -g gtop
-
-# TODO: configure my editor (spacemacs, spacevim, vscode, or what?)
 
 # Install patched fonts (this takes a while)
 cd
@@ -100,6 +102,20 @@ cd nerd-fonts
 ./install Terminus
 cd
 rm -rf nerd-fonts
+
+# TODO: thinking about dumping spacevim for a more custom config
+# Configure vim
+cd ~/dotfiles
+stow spacevim
+cd
+# This script will install spacevim
+curl -sLf https://spacevim.org/install.sh | bash
+# NOTE: you have to open and close vim a couple times to let plugins install
+
+# Install vscodium (can't actually use it in wsl, so disabled for now)
+#wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
+#echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
+#sudo apt update && sudo apt install codium
 
 # Do a final upgrade and clean up
 sudo apt update
