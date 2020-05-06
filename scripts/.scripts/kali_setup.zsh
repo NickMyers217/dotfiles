@@ -19,31 +19,31 @@ git clone https://github.com/nmyers217/dotfiles
 sudo apt install stow
 
 # Unstow the scripts
-cd dotfiles
+cd ~/dotfiles
 stow scripts
 cd
 
 # Configure htop
-cd dotfiles
+cd ~/dotfiles
 stow htop
 sudo apt install htop
 cd
 
 # Configure neofetch
-cd dotfiles
+cd ~/dotfiles
 stow neofetch
 sudo apt install neofetch
 cd
 
 # Configure ranger
-cd dotfiles
+cd ~/dotfiles
 stow ranger 
 sudo apt install ranger
 cd
 
 # TODO: lets get i3-gaps instead
 # Configure the window manager (i3) and its related programs
-cd dotfiles
+cd ~/dotfiles
 stow X
 stow polybar
 stow i3
@@ -67,7 +67,7 @@ cd
 
 # TODO: I want to replace this with alacritty instead
 # Configure a better terminal emulator (I'm going to use termite)
-cd dotfiles
+cd ~/dotfiles
 stow termite
 stow gtk-3.0
 cd
