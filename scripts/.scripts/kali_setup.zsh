@@ -71,14 +71,19 @@ sh ~/.scripts/install_alacritty.sh
 # Configure zsh and prezto
 cd
 sudo apt install zsh
-zsh
+zsh # choose option 0
+rm .zshrc
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 chsh -s $(which zsh)
-zsh # NOTE: this will be the default on next login
+zsh # this will be the default on next login
+rm .zpreztorc
+cd dotfiles
+stow zsh
+cd
 # NOTE: at this point you might want to restart and tinker with .zpreztorc (i change to pure theme and turn on auto complete)
 
 # Configure node, npm stuff, and gtop
