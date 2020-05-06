@@ -3,9 +3,9 @@ font pango:DejaVu Sans Mono 9
 client.focused	#268bd2   #268bd2   #ffffff   #268bd2  #268bd2
 bindsym Mod1+d exec exec rofi -show run
 bindsym Mod1+g exec exec rofi -show ssh
-bindsym Mod1+t exec exec termite -d ~ -t "file browser" -e ranger
-bindsym Mod1+p exec exec termite -t "system monitor" -e gtop
-bindsym Mod1+o exec exec termite -t "task manager" -e htop
+bindsym Mod1+t exec exec alacritty --working-directory ~ -t "file browser" -e ranger
+bindsym Mod1+p exec exec alacritty -t "system monitor" -e gtop
+bindsym Mod1+o exec exec alacritty -t "task manager" -e htop
 
 gaps inner 20
 gaps outer 5
@@ -17,7 +17,7 @@ set $right l
 
 floating_modifier Mod1
 
-bindsym Mod1+Return exec termite
+bindsym Mod1+Return exec i3-sensible-terminal
 
 bindsym Mod1+Shift+q kill
 

@@ -62,15 +62,11 @@ sh ~/.scripts/install_i3gaps.sh # This script will build i3-gaps from source
 ###
 ###   - After you get the xserver and window manager running you can continue on
 
-# TODO: I want to replace this with alacritty instead
-# Configure a better terminal emulator (I'm going to use termite)
+# Configure a better terminal emulator (I'm going to use alacritty)
 cd ~/dotfiles
-stow termite
-stow gtk-3.0
+stow alacritty
 cd
-# NOTE: this installation process always seems to have issues, so keep a close eye on it and run commands manually if needed
-sh ~/.scripts/install_termite.sh 
-# NOTE: at this point i open up termite and continue on from there
+sh ~/.scripts/install_alacritty.sh
 
 # Configure zsh and prezto
 cd
