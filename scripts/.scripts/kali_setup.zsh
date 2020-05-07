@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install some very basic stuff for the tasks ahead
-sudo apt install xterm git neovim man psmisc
+sudo apt install xterm git neovim man psmisc ripgrep
 
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
@@ -112,6 +112,7 @@ rm -rf ~/.config/nvim
 stow nvim
 cd
 sudo update-alternatives --config editor
+sudo npm i -g yarn # if you intend to use coc you will need yarn
 
 # Install vscodium (can't actually use it in wsl, so disabled for now)
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
