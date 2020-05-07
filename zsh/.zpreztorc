@@ -11,6 +11,10 @@
 
 neofetch
 
+export EDITOR=nvim
+
+. "${HOME}/.local/share/lscolors.sh"
+
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 

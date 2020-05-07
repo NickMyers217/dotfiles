@@ -80,10 +80,14 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 chsh -s $(which zsh)
 zsh # this will be the default on next login
+# This stuff sets up better ls colors (https://github.com/trapd00r/LS_COLORS)
+mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
+cd /tmp/LS_COLORS && sh install.sh
 rm .zpreztorc
 cd dotfiles
 stow zsh
 cd
+
 # NOTE: at this point you might want to restart and tinker with .zpreztorc (i change to pure theme and turn on auto complete)
 
 # Configure node, npm stuff, and gtop
@@ -101,14 +105,13 @@ cd nerd-fonts
 cd
 rm -rf nerd-fonts
 
-# TODO: thinking about dumping spacevim for a more custom config
 # Configure vim
 cd ~/dotfiles
-stow spacevim
+# NOTE: make sure you back up anything you want to keep before doing this
+rm -rf ~/.config/nvim
+stow nvim
 cd
-# This script will install spacevim
-curl -sLf https://spacevim.org/install.sh | bash
-# NOTE: you have to open and close vim a couple times to let plugins install
+sudo update-alternatives --config editor
 
 # Install vscodium (can't actually use it in wsl, so disabled for now)
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
