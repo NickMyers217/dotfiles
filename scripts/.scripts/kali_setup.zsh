@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install some very basic stuff for the tasks ahead
-sudo apt install xterm git neovim man
+sudo apt install xterm git neovim man psmisc
 
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
@@ -92,7 +92,7 @@ sudo npm install -g gtop
 
 # Install patched fonts (this takes a while)
 cd
-git clone https://github.com/ryanoasis/nerd-fonts
+git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
 cd nerd-fonts
 ./install Gohu
 ./install FantasqueSansMono
