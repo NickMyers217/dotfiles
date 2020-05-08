@@ -16,7 +16,9 @@ rustup update stable
 # install dependencies
 sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 # install graphics
-sudo apt install libgl1-mesa-glx
+sudo apt install libgl1-mesa-glx # for nvidia
+#sudo apt-get install xserver-xorg-video-intel # for intel
+
 
 # do the build (we are using cargo to install a deb file)
 cd alacritty

@@ -67,6 +67,7 @@ cd ~/dotfiles
 stow alacritty
 cd
 sh ~/.scripts/install_alacritty.sh
+# NOTE: the font is going to be wacko until we install nerd fonts
 
 # Configure zsh and prezto
 cd
@@ -83,6 +84,7 @@ zsh # this will be the default on next login
 # This stuff sets up better ls colors (https://github.com/trapd00r/LS_COLORS)
 mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
 cd /tmp/LS_COLORS && sh install.sh
+cd
 rm .zpreztorc
 cd dotfiles
 stow zsh
@@ -98,10 +100,10 @@ sudo npm install -g gtop
 cd
 git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
 cd nerd-fonts
-./install Gohu
-./install FantasqueSansMono
-./install SourceCodePro
-./install Terminus
+./install.sh Gohu
+./install.sh FantasqueSansMono
+./install.sh SourceCodePro
+./install.sh Terminus
 cd
 rm -rf nerd-fonts
 
@@ -111,6 +113,9 @@ cd ~/dotfiles
 rm -rf ~/.config/nvim
 stow nvim
 cd
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-pip
 sudo update-alternatives --config editor
 sudo npm i -g yarn # if you intend to use coc you will need yarn
 sudo pip3 install ueberzug # if you intend to use rnvimr you will need this
