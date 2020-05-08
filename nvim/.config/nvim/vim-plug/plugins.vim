@@ -6,40 +6,28 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-" TODO: Themes
-Plug 'christianchiarulli/onedark.vim'
-
-" Better Syntax Support
+" Syntax and Themeing
 Plug 'sheerun/vim-polyglot'
-
-" Auto pairs for '(' '[' '{' 
 Plug 'jiangmiao/auto-pairs'
+Plug 'christianchiarulli/onedark.vim'
+Plug 'ryanoasis/vim-devicons'
 
-" Status Line
+" Status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Cool Icons
-Plug 'ryanoasis/vim-devicons'
 
 " Intellisense, lint, formatting, etc...
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Denite for navigation and general project management
+" Denite and rnvimr for navigation and general project management
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " adds ranger support
 
-" TODO: Ranger (is this really neccesarry)
-" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-
-" TODO: version control
 " TODO: make sure this handles undo history across different sessions
-" TODO: Git (is this really any good? is there something that even comes close to magit?)
-" TODO: denite has git stuff, is it any better
-" TODO: maybe just use lazygit https://github.com/kdheepak/lazygit.vim
-" Plug 'mhinz/vim-signify'
-" Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-rhubarb'
-" Plug 'junegunn/gv.vim'
+" Version Control
+Plug 'mhinz/vim-signify' " adds gutter diff info
+Plug 'chemzqm/denite-git'
+"Plug 'kdheepak/lazygit.vim'
 
 " TODO: Terminal
 " Plug 'voldikss/vim-floaterm'

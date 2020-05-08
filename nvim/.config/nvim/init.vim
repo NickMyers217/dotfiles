@@ -17,4 +17,7 @@ source $HOME/.config/nvim/themes/airline.vim
 " Plugin configs
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/denite.vim
+source $HOME/.config/nvim/plug-config/rnvimr.vim
+source $HOME/.config/nvim/plug-config/signify.vim
+source $HOME/.config/nvim/plug-config/denite-git.vim
 

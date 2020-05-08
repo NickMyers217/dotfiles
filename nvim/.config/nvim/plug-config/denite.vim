@@ -13,6 +13,10 @@ function! s:denite_my_settings() abort
         \ denite#do_map('open_filter_buffer')
   nnoremap <silent><buffer><expr> <Space>
         \ denite#do_map('toggle_select').'j'
+  nnoremap <silent><buffer><expr> a
+        \ denite#do_map('add')
+  nnoremap <silent><buffer><expr> ?
+        \ denite#do_map('choose_action')
 endfunction
 
 " Use ripgrep for searching current directory for files
@@ -73,4 +77,9 @@ function! s:profile(opts) abort
 endfunction
 
 call s:profile(s:denite_options)
+
+" Open Denite File
+nmap <leader>p :DeniteProjectDir file<CR>
+nmap <leader>f :Denite file/rec<CR>
+" TODO: grepping and searching for things
 

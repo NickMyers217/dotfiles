@@ -105,7 +105,7 @@ cd nerd-fonts
 cd
 rm -rf nerd-fonts
 
-# Configure vim
+# Configure nvim
 cd ~/dotfiles
 # NOTE: make sure you back up anything you want to keep before doing this
 rm -rf ~/.config/nvim
@@ -113,6 +113,7 @@ stow nvim
 cd
 sudo update-alternatives --config editor
 sudo npm i -g yarn # if you intend to use coc you will need yarn
+sudo pip3 install ueberzug # if you intend to use rnvimr you will need this
 
 # Install vscodium (can't actually use it in wsl, so disabled for now)
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
