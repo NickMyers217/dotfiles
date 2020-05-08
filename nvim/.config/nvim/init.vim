@@ -20,4 +20,5 @@ source $HOME/.config/nvim/plug-config/denite.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/denite-git.vim
+source $HOME/.config/nvim/plug-config/neoterm.vim
 

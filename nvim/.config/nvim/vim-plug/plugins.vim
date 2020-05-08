@@ -19,18 +19,19 @@ Plug 'vim-airline/vim-airline-themes'
 " Intellisense, lint, formatting, etc...
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" TODO: sessions?
 " Denite and rnvimr for navigation and general project management
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " adds ranger support
 
-" TODO: make sure this handles undo history across different sessions
+" TODO: persistent undo
 " Version Control
 Plug 'mhinz/vim-signify' " adds gutter diff info
 Plug 'chemzqm/denite-git'
 "Plug 'kdheepak/lazygit.vim'
 
-" TODO: Terminal
-" Plug 'voldikss/vim-floaterm'
+" Terminal
+Plug 'kassio/neoterm'
 
 " TODO: Add some color
 " Plug 'norcalli/nvim-colorizer.lua'
