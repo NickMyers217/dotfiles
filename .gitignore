@@ -9,3 +9,4 @@ ranger/.config/ranger/tagged
 vim/.vim/bundle/
 nvim/.config/nvim/autoload/plugged
 nvim/.config/nvim/autoload/plug.vim
+nvim/.config/nvim/undo_hist/

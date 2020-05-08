@@ -41,6 +41,9 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
 
+set undodir=$HOME/.config/nvim/undo_hist " Undo history goes here
+set undofile                             " Maintain historical undo info
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

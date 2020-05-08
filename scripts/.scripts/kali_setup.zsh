@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install some very basic stuff for the tasks ahead
-sudo apt install xterm git neovim man psmisc ripgrep
+sudo apt install xterm git neovim man psmisc ripgrep verse cowsay
 
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 

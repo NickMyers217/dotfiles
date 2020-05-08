@@ -21,4 +21,7 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/denite-git.vim
 source $HOME/.config/nvim/plug-config/neoterm.vim
+source $HOME/.config/nvim/plug-config/denite-session.vim
+source $HOME/.config/nvim/plug-config/start-screen.vim
+luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
