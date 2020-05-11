@@ -9,6 +9,10 @@ sudo apt update && sudo apt upgrade
 # Install some very basic stuff for the tasks ahead
 sudo apt install xterm git neovim man psmisc ripgrep
 
+# Graphics driver
+sudo apt install libgl1-mesa-glx # for nvidia
+#sudo apt-get install xserver-xorg-video-intel # for intel
+
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
 # Set up GNU Stow so we can place our dotfiles with sym links
@@ -78,14 +82,19 @@ zsh # this will be the default on next login
 # This stuff sets up better ls colors (https://github.com/trapd00r/LS_COLORS)
 mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
 cd /tmp/LS_COLORS && sh install.sh
+. "~/.local/share/lscolors.sh"
 cd
 rm .zpreztorc # remove the default config
 cd dotfiles && stow zsh && cd
 
-# TODO replace this with a script to install nvm so that we can pick the LTS version
 # Configure node, npm stuff, and gtop
-sudo apt install nodejs npm # get coffee here...
-sudo npm install -g gtop
+export NVM_DIR="$HOME/.nvm" && (
+  git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+  cd "$NVM_DIR"
+  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+) && \. "$NVM_DIR/nvm.sh"
+nvm install 12.16.3
+npm install -g gtop
 
 # Configure nvim
 cd
@@ -93,8 +102,8 @@ sudo apt update && sudo apt upgrade
 sudo apt install python3-pip
 # TODO this doesn't seem to make nvim the default, need to fix that
 sudo update-alternatives --config editor 
-sudo npm i -g yarn # if you intend to use coc you will need yarn
-sudo pip3 install ueberzug # if you intend to use rnvimr you will need this
+npm i -g yarn # if you intend to use coc you will need yarn
+pip3 install ueberzug # if you intend to use rnvimr you will need this
 sudo apt install verse cowsay # i use these for startify
 cd ~/dotfiles
 # NOTE make sure you back up anything you want to keep before doing this
