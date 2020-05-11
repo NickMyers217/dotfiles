@@ -94,17 +94,14 @@ export NVM_DIR="$HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 nvm install 12.16.3
-npm install -g gtop
+npm install -g gtop yarn
 
 # Configure nvim
 cd
 sudo apt update && sudo apt upgrade
-sudo apt install python3-pip
+sudo apt install python3-pip verse cowsay
 # TODO this doesn't seem to make nvim the default, need to fix that
 sudo update-alternatives --config editor 
-npm i -g yarn # if you intend to use coc you will need yarn
-pip3 install ueberzug # if you intend to use rnvimr you will need this
-sudo apt install verse cowsay # i use these for startify
 cd ~/dotfiles
 # NOTE make sure you back up anything you want to keep before doing this
 rm -rf ~/.config/nvim
