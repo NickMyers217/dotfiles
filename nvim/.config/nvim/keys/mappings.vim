@@ -29,6 +29,3 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " Clear highlight
 nmap <leader>l :nohlsearch<CR>
 
-" Escape in terminal mode
-tnoremap <Esc> <C-\><C-n>
-

@@ -9,8 +9,7 @@
 # General
 #
 
-neofetch
-
+export VISUAL=nvim
 export EDITOR=nvim
 
 . "${HOME}/.local/share/lscolors.sh"

@@ -1,3 +1,5 @@
+let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-julia', 'coc-vimlsp']
+
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -91,7 +93,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" Use auocmd to force lightline update.
+"autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " Mappings using CoCList:
 " Show all diagnostics.
@@ -113,23 +116,23 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Explorer
 let g:coc_explorer_global_presets = {
-\   'floating': {
-\      'position': 'floating',
-\   },
-\   'floatingLeftside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 30,
-\   },
-\   'floatingRightside': {
-\      'position': 'floating',
-\      'floating-position': 'right-center',
-\      'floating-width': 30,
-\   },
-\   'simplify': {
-\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
-\ }
+      \   'floating': {
+      \      'position': 'floating',
+      \   },
+      \   'floatingLeftside': {
+      \      'position': 'floating',
+      \      'floating-position': 'left-center',
+      \      'floating-width': 30,
+      \   },
+      \   'floatingRightside': {
+      \      'position': 'floating',
+      \      'floating-position': 'right-center',
+      \      'floating-width': 30,
+      \   },
+      \   'simplify': {
+      \     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+      \   }
+      \ }
 "nmap <silent> <space>e :CocCommand explorer<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
 nmap <space>f :CocCommand explorer --preset floatingRightside<CR>

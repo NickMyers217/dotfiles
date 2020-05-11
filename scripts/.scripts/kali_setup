@@ -1,54 +1,37 @@
 #!/usr/bin/env sh
 
-# NOTE: this is intended to be ran manually piece by piece for now
+# NOTE this is intended to be ran manually piece by piece for now
 
 # Initial system updates
 cd
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade
 
 # Install some very basic stuff for the tasks ahead
-sudo apt install xterm git neovim man psmisc ripgrep verse cowsay
+sudo apt install xterm git neovim man psmisc ripgrep
 
 # Clone the dotfiles repo
 git clone https://github.com/nmyers217/dotfiles 
-
 # Set up GNU Stow so we can place our dotfiles with sym links
 sudo apt install stow
 
 # Unstow the scripts
-cd ~/dotfiles
-stow scripts
-cd
+cd ~/dotfiles && stow scripts && cd
 
-# Configure htop
+# Configure htop, neofetch, and ranger
+sudo apt install htop neofetch ranger
 cd ~/dotfiles
-stow htop
-sudo apt install htop
-cd
-
-# Configure neofetch
-cd ~/dotfiles
-stow neofetch
-sudo apt install neofetch
-cd
-
-# Configure ranger
-cd ~/dotfiles
-stow ranger 
-sudo apt install ranger
+stow htop && stow neofetch && stow ranger
 cd
 
 # Configure the window manager (i3) and its related programs
-cd ~/dotfiles
-stow X
-stow polybar
-stow i3
-cd
 sudo apt install x11-apps polybar rofi hsetroot feh compton
-sh ~/.scripts/install_i3gaps.sh # This script will build i3-gaps from source
+cd ~/dotfiles
+stow X && stow polybar && stow i3
+cd
+# NOTE this script will build i3-gaps from source
+sh ~/.scripts/install_i3gaps.sh
 
-### NOTE:
+### NOTE
 ###   - At this point you want to go ahead and start your xserver from windows
 ###     - In my case i will start x410 on localhost:0, but vcxsrv is an ok free alternative
 ###   - After you start your xserver you can run the below script to start up i3
@@ -60,20 +43,29 @@ sh ~/.scripts/install_i3gaps.sh # This script will build i3-gaps from source
 ### shell.Run """x410.exe"""
 ### shell.Run "kali -c ""~/.scripts/wlaunch""", 0
 ###
-###   - After you get the xserver and window manager running you can continue on
+###   - After you get the xserver and the window manager running you can continue on
+
+# Install patched fonts (this takes a while)
+cd
+git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
+cd nerd-fonts
+./install.sh FantasqueSansMono
+./install.sh FiraCode
+./install.sh SourceCodePro
+./install.sh Terminus
+cd
+rm -rf nerd-fonts
 
 # Configure a better terminal emulator (I'm going to use alacritty)
-cd ~/dotfiles
-stow alacritty
-cd
+cd ~/dotfiles && stow alacritty && cd
+# NOTE this script builds alacritty from source
 sh ~/.scripts/install_alacritty.sh
-# NOTE: the font is going to be wacko until we install nerd fonts
 
 # Configure zsh and prezto
 cd
 sudo apt install zsh
 zsh # choose option 0
-rm .zshrc
+rm .zshrc # remove the default config
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -85,50 +77,31 @@ zsh # this will be the default on next login
 mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
 cd /tmp/LS_COLORS && sh install.sh
 cd
-rm .zpreztorc
-cd dotfiles
-stow zsh
-cd
+rm .zpreztorc # remove the default config
+cd dotfiles && stow zsh && cd
 
-# NOTE: at this point you might want to restart and tinker with .zpreztorc (i change to pure theme and turn on auto complete)
-
+# TODO replace this with a script to install nvm so that we can pick the LTS version
 # Configure node, npm stuff, and gtop
 sudo apt install nodejs npm # get coffee here...
 sudo npm install -g gtop
 
-# Install patched fonts (this takes a while)
-cd
-git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
-cd nerd-fonts
-./install.sh Gohu
-./install.sh FantasqueSansMono
-./install.sh SourceCodePro
-./install.sh Terminus
-cd
-rm -rf nerd-fonts
-
 # Configure nvim
+cd
+sudo apt update && sudo apt upgrade
+sudo apt install python3-pip
+# TODO this doesn't seem to make nvim the default, need to fix that
+sudo update-alternatives --config editor 
+sudo npm i -g yarn # if you intend to use coc you will need yarn
+sudo pip3 install ueberzug # if you intend to use rnvimr you will need this
+sudo apt install verse cowsay # i use these for startify
 cd ~/dotfiles
-# NOTE: make sure you back up anything you want to keep before doing this
+# NOTE make sure you back up anything you want to keep before doing this
 rm -rf ~/.config/nvim
 stow nvim
 cd
-sudo apt update
-sudo apt upgrade
-sudo apt install python3-pip
-sudo update-alternatives --config editor
-sudo npm i -g yarn # if you intend to use coc you will need yarn
-sudo pip3 install ueberzug # if you intend to use rnvimr you will need this
 
-# Install vscodium (can't actually use it in wsl, so disabled for now)
-#wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
-#echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
-#sudo apt update && sudo apt install codium
-
-# TODO: can i install lazygit here?
+# TODO can i install lazygit here?
 
 # Do a final upgrade and clean up
-sudo apt update
-sudo apt upgrade
-sudo apt autoremove
+sudo apt update && sudo apt upgrade && sudo apt autoremove
 

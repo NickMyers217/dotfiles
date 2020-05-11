@@ -24,3 +24,5 @@ let g:startify_bookmarks = [
       \ ]
 
 let g:startify_enable_special = 0
+
+let g:webdevicons_enable_startify = 1

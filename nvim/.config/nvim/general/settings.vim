@@ -24,7 +24,9 @@ set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
-set relativenumber                      " relative Line numbers
+set relativenumber                      " Relative line numbers
+set number
+set number relativenumber
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs 
@@ -36,17 +38,18 @@ set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
-set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set incsearch
+set incsearch                           " Incremental search highlighting
+set colorcolumn=92                      " Plz no lines longer than this
+
 
 set undodir=$HOME/.config/nvim/undo_hist " Undo history goes here
 set undofile                             " Maintain historical undo info
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 
 " You can't stop me
 cmap w!! w !sudo tee %
