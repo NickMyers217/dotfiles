@@ -6,6 +6,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+" Terminal
+Plug 'kassio/neoterm'
+
 " Syntax and Themeing
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
@@ -20,12 +23,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'unblevable/quick-scope'
 
 " Start Screen
 Plug 'mhinz/vim-startify'
-
-" Terminal
-Plug 'kassio/neoterm'
 
 " Navigation
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " adds ranger support
@@ -36,7 +37,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify' " adds gutter diff info
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-"TODO: Plug 'kdheepak/lazygit.vim'
 
 " Intellisense, lint, formatting, etc...
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

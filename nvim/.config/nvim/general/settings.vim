@@ -51,5 +51,10 @@ set undofile                             " Maintain historical undo info
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Filetype specific stuff
+autocmd FileType julia setlocal tabstop=4 shiftwidth=4
+au VimEnter,BufRead,BufNewFile *.jl set filetype=julia
+
+
 " You can't stop me
 cmap w!! w !sudo tee %
