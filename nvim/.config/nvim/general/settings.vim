@@ -1,8 +1,5 @@
-" set leader key
-let mapleader=" "
-nnoremap <Space> <Nop>
-
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                      	" Treat dash separated words as a word text object"
+set formatoptions-=cro                  " Stop newline continuation of comments
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open
@@ -37,24 +34,27 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set updatetime=300                      " Faster completion
+set updatetime=200                      " Faster completion
 set timeoutlen=300                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch                           " Incremental search highlighting
-set colorcolumn=92                      " Plz no lines longer than this
-
 
 set undodir=$HOME/.config/nvim/undo_hist " Undo history goes here
 set undofile                             " Maintain historical undo info
 
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Filetype specific stuff
+" Julia stuff
 autocmd FileType julia setlocal tabstop=4 shiftwidth=4
 au VimEnter,BufRead,BufNewFile *.jl set filetype=julia
 
+" Turn spellcheck on for markdown files
+augroup auto_spellcheck
+  autocmd BufNewFile,BufRead *.md setlocal spell
+augroup END
+
+
+" auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+au! BufWritePost $MYVIMRC source %
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " You can't stop me
 cmap w!! w !sudo tee %

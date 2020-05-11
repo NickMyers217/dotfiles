@@ -1,16 +1,8 @@
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-
-" Toggle the term
-nmap <leader>' :Ttoggle<CR>
-
-
 " Send code to the REPL
 " Use gx{text-object} in normal mode
 nmap gx <Plug>(neoterm-repl-send)
 " Send selected contents in visual mode.
 xmap gx <Plug>(neoterm-repl-send)
-
 
 let g:neoterm_default_mod = ':botright'
 

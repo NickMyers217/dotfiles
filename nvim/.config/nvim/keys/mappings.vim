@@ -1,3 +1,10 @@
+" Set leader key
+let mapleader=" "
+nnoremap <Space> <Nop>
+
+" Turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
@@ -23,9 +30,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
-" Clear highlight
-nmap <leader>l :nohlsearch<CR>
+" Use ctrl+alt+{hjkl} to resize windows
+nnoremap <C-M-j> :resize -2<CR>
+nnoremap <C-M-k> :resize +2<CR>
+nnoremap <C-M-h> :vertical resize -2<CR>
+nnoremap <C-M-l> :vertical resize +2<CR>
 

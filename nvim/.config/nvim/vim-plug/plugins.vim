@@ -6,9 +6,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-" Terminal
-Plug 'kassio/neoterm'
-
 " Syntax and Themeing
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
@@ -19,22 +16,23 @@ Plug 'christianchiarulli/onedark.vim'
 " Utils
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'preservim/nerdcommenter'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'unblevable/quick-scope'
+Plug 'rbgrouleff/bclose.vim'
 
 " Start Screen
 Plug 'mhinz/vim-startify'
 
 " Navigation
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " adds ranger support
+Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Version Control
-Plug 'mhinz/vim-signify' " adds gutter diff info
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
@@ -42,13 +40,14 @@ Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Status and tab lines
-"Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
+" Terminal
+Plug 'kassio/neoterm'
+
 " Help
-" TODO: configure this to actually be useful?
-"Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " Automatically install missing plugins on startup

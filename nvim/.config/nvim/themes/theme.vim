@@ -66,7 +66,7 @@ let g:lightline.component_function = {
       \   'filetype': 'MyFiletype',
       \   'fileformat': 'MyFileformat',
       \   'gitbranch': 'MyGitBranch',
-      \   'repostats': 'sy#repo#get_stats_decorated',
+      \   'repostats': 'MyGitStatus',
       \   'cocstatus': 'coc#status',
       \ } 
 
@@ -80,6 +80,11 @@ endfunction
 
 function! MyGitBranch()
   return '' . FugitiveHead()
+endfunction
+
+function! MyGitStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
 endfunction
 
 let g:lightline#bufferline#show_number = 1
