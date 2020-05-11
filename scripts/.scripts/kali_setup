@@ -56,10 +56,12 @@ cd nerd-fonts
 cd
 rm -rf nerd-fonts
 
-# Configure a better terminal emulator (I'm going to use alacritty)
-cd ~/dotfiles && stow alacritty && cd
-# NOTE this script builds alacritty from source
-sh ~/.scripts/install_alacritty.sh
+# Configure a better terminal emulator (I'm going to use kitty)
+sudo apt install kitty
+cd ~/dotfiles && stow kitty && cd
+sudo update-alternatives --install \
+  /usr/bin/x-terminal-emulator x-terminal-emulator `which kitty` 50
+sudo update-alternatives --config x-terminal-emulator
 
 # Configure zsh and prezto
 cd
