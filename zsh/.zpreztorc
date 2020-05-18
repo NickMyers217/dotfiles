@@ -11,6 +11,8 @@
 
 export VISUAL=nvim
 export EDITOR=nvim
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 . "${HOME}/.local/share/lscolors.sh"
 

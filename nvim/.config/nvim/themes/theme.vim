@@ -9,6 +9,7 @@ let g:gruvbox_sign_column='bg0'
 let g:gruvbox_contrast_dark='medium'
 
 syntax on
+
 colorscheme gruvbox
 
 "colorscheme horizon

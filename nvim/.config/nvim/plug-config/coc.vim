@@ -1,4 +1,13 @@
-let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-julia', 'coc-vimlsp']
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-tsserver',
+  \ 'coc-julia',
+  \ 'coc-vimlsp',
+  \ 'coc-deno',
+  \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>

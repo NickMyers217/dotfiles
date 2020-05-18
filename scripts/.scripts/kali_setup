@@ -7,7 +7,7 @@ cd
 sudo apt update && sudo apt upgrade
 
 # Install some very basic stuff for the tasks ahead
-sudo apt install xterm git neovim man psmisc ripgrep
+sudo apt install xterm git neovim man psmisc ripgrep unzip
 
 # Graphics driver
 sudo apt install libgl1-mesa-glx # for nvidia
@@ -55,6 +55,7 @@ git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
 cd nerd-fonts
 ./install.sh FantasqueSansMono
 ./install.sh FiraCode
+./install.sh Mononoki
 ./install.sh SourceCodePro
 ./install.sh Terminus
 cd
@@ -95,6 +96,9 @@ export NVM_DIR="$HOME/.nvm" && (
 ) && \. "$NVM_DIR/nvm.sh"
 nvm install 12.16.3
 npm install -g gtop yarn
+
+# Install deno
+curl -fsSL https://deno.land/x/install/install.sh | sh
 
 # Configure nvim
 cd
