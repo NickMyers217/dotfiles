@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Meant to be run with `bash -c "/path/to/wlaunch"` when running from e.g. a windows shortcut
+
+export DISPLAY=:0
+cd ~
+source ~/.bashrc
+i3

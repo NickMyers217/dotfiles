@@ -1,0 +1,115 @@
+#!/usr/bin/env sh
+
+# NOTE this is intended to be ran manually piece by piece for now
+
+# Initial system updates
+cd
+sudo apt update && sudo apt upgrade
+
+# Install some very basic stuff for the tasks ahead
+sudo apt install xterm git neovim man psmisc ripgrep
+
+# Graphics driver
+sudo apt install libgl1-mesa-glx # for nvidia
+#sudo apt-get install xserver-xorg-video-intel # for intel
+
+# Clone the dotfiles repo
+git clone https://github.com/nmyers217/dotfiles 
+# Set up GNU Stow so we can place our dotfiles with sym links
+sudo apt install stow
+
+# Unstow the scripts
+cd ~/dotfiles && stow scripts && cd
+
+# Configure htop, neofetch, and ranger
+sudo apt install htop neofetch ranger
+cd ~/dotfiles
+stow htop && stow neofetch && stow ranger
+cd
+
+# Configure the window manager (i3) and its related programs
+sudo apt install x11-apps polybar rofi hsetroot feh compton
+cd ~/dotfiles
+stow X && stow polybar && stow i3
+cd
+# NOTE this script will build i3-gaps from source
+sh ~/.scripts/install_i3gaps.sh
+
+### NOTE
+###   - At this point you want to go ahead and start your xserver from windows
+###     - In my case i will start x410 on localhost:0, but vcxsrv is an ok free alternative
+###   - After you start your xserver you can run the below script to start up i3
+###     sh ~/.scripts/wlaunch
+###   - In my case though, I'm going to do both these from windows with this script named wsl.vbs
+###
+### ' This script is meant to be launched from the Windows side, to start up a x410 container
+### Set shell = CreateObject("WScript.Shell" ) 
+### shell.Run """x410.exe"""
+### shell.Run "kali -c ""~/.scripts/wlaunch""", 0
+###
+###   - After you get the xserver and the window manager running you can continue on
+
+# Install patched fonts (this takes a while)
+cd
+git clone https://github.com/ryanoasis/nerd-fonts # go out to eat here...
+cd nerd-fonts
+./install.sh FantasqueSansMono
+./install.sh FiraCode
+./install.sh SourceCodePro
+./install.sh Terminus
+cd
+rm -rf nerd-fonts
+
+# Configure a better terminal emulator (I'm going to use kitty)
+sudo apt install kitty
+cd ~/dotfiles && stow kitty && cd
+sudo update-alternatives --install \
+  /usr/bin/x-terminal-emulator x-terminal-emulator `which kitty` 50
+sudo update-alternatives --config x-terminal-emulator
+
+# Configure zsh and prezto
+cd
+sudo apt install zsh
+zsh # choose option 0
+rm .zshrc # remove the default config
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s $(which zsh)
+zsh # this will be the default on next login
+# This stuff sets up better ls colors (https://github.com/trapd00r/LS_COLORS)
+mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
+cd /tmp/LS_COLORS && sh install.sh
+. "~/.local/share/lscolors.sh"
+cd
+rm .zpreztorc # remove the default config
+cd dotfiles && stow zsh && cd
+
+# Configure node, npm stuff, and gtop
+export NVM_DIR="$HOME/.nvm" && (
+  git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+  cd "$NVM_DIR"
+  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+) && \. "$NVM_DIR/nvm.sh"
+nvm install 12.16.3
+npm install -g gtop yarn
+
+# Configure nvim
+cd
+sudo apt update && sudo apt upgrade
+sudo apt install python3-pip verse cowsay
+# TODO this doesn't seem to make nvim the default, need to fix that
+sudo update-alternatives --config editor 
+cd ~/dotfiles
+# NOTE make sure you back up anything you want to keep before doing this
+rm -rf ~/.config/nvim
+stow nvim
+cd
+
+# TODO can i install lazygit here?
+
+# Do a final upgrade and clean up
+sudo apt update && sudo apt upgrade && sudo apt autoremove
+

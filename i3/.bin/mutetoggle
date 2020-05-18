@@ -1,3 +1,0 @@
-#!/bin/sh
-pulseaudio-ctl mute
-killall -USR1 i3blocks
