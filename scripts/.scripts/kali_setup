@@ -68,25 +68,16 @@ sudo update-alternatives --install \
   /usr/bin/x-terminal-emulator x-terminal-emulator `which kitty` 50
 sudo update-alternatives --config x-terminal-emulator
 
-# Configure zsh and prezto
+# Configure fish as my shell
 cd
-sudo apt install zsh
-zsh # choose option 0
-rm .zshrc # remove the default config
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-chsh -s $(which zsh)
-zsh # this will be the default on next login
-# This stuff sets up better ls colors (https://github.com/trapd00r/LS_COLORS)
-mkdir /tmp/LS_COLORS && curl -L https://api.github.com/repos/trapd00r/LS_COLORS/tarball/master | tar xzf - --directory=/tmp/LS_COLORS --strip=1
-cd /tmp/LS_COLORS && sh install.sh
-. "~/.local/share/lscolors.sh"
-cd
-rm .zpreztorc # remove the default config
-cd dotfiles && stow zsh && cd
+sudo apt install fish
+fish
+chsh -s (which fish)
+curl -L https://get.oh-my.fish | fish
+omf update
+omf install pure
+rm -rf ~/.config/fish
+cd dotfiles && stow fish && cd
 
 # Configure node, npm stuff, and gtop
 export NVM_DIR="$HOME/.nvm" && (
@@ -111,8 +102,6 @@ cd ~/dotfiles
 rm -rf ~/.config/nvim
 stow nvim
 cd
-
-# TODO can i install lazygit here?
 
 # Do a final upgrade and clean up
 sudo apt update && sudo apt upgrade && sudo apt autoremove
