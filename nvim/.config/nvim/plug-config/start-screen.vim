@@ -27,6 +27,7 @@ let g:startify_bookmarks = [
       \ { 'i': '~/.config/nvim/init.vim' },
       \ { 'c': '~/.config/i3/config' },
       \ { 'z': '~/.zpreztorc' },
+      \ { 't': '~/.config/kitty/kitty.conf' },
       \ { 'k': '~/.scripts/kali_setup' }
       \ ]
 
