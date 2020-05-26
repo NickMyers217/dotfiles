@@ -10,3 +10,4 @@ vim/.vim/bundle/
 nvim/.config/nvim/autoload/plugged
 nvim/.config/nvim/autoload/plug.vim
 nvim/.config/nvim/undo_hist/
+ranger/.config/ranger/plugins/__pycache__/

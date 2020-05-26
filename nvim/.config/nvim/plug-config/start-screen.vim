@@ -24,10 +24,10 @@ endfunction
 
 let g:startify_bookmarks = [
       \ '~/code',
-      \ { 'i': '~/.config/nvim/init.vim' },
-      \ { 'c': '~/.config/i3/config' },
-      \ { 't': '~/.config/kitty/kitty.conf' },
-      \ { 'k': '~/.scripts/kali_setup' },
+      \ { 'vi': '~/.config/nvim/init.vim' },
+      \ { 'i3': '~/.config/i3/config' },
+      \ { 'te': '~/.config/kitty/kitty.conf' },
+      \ { 'in': '~/.scripts/kali_setup' },
       \ { 'sh': '~/.config/fish/conf.d/omf.fish' },
       \ ]
 

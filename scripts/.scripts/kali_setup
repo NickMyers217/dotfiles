@@ -76,6 +76,7 @@ chsh -s (which fish)
 curl -L https://get.oh-my.fish | fish
 omf update
 omf install pure
+omf install bass
 rm -rf ~/.config/fish
 cd dotfiles && stow fish && cd
 
