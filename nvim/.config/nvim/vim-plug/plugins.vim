@@ -10,7 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ntk148v/vim-horizon'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'christianchiarulli/onedark.vim'
 
 " Utils

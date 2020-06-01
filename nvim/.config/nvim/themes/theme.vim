@@ -4,16 +4,16 @@ hi Comment cterm=italic
 "let g:onedark_terminal_italics=1
 "let g:onedark_termcolors=256
 
-" let g:gruvbox_italic=1
-" let g:gruvbox_sign_column='bg0'
-" let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_italic=1
+let g:gruvbox_sign_column='bg0'
+let g:gruvbox_contrast_dark='medium'
 
 syntax on
 
-" colorscheme gruvbox
+colorscheme gruvbox
 
-colorscheme horizon
-highlight Pmenu ctermbg=111217 guibg=#111217
+"colorscheme horizon
+"highlight Pmenu ctermbg=111217 guibg=#111217
 
 "colorscheme onedark
 
@@ -26,7 +26,7 @@ endif
 ""Lightline setup
 let g:lightline = {}
 
-let g:lightline.colorscheme = 'horizon'
+let g:lightline.colorscheme = 'gruvbox'
 
 let g:lightline.active = {
       \ 'left': [ [ 'mode', 'paste' ],
