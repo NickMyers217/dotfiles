@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
   \ 'coc-julia',
   \ 'coc-vimlsp',
   \ 'coc-deno',
+  \ 'coc-rls',
   \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.

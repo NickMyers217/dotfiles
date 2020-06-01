@@ -46,6 +46,10 @@ Plug 'mengelbrecht/lightline-bufferline'
 " Terminal
 Plug 'kassio/neoterm'
 
+" REPL
+" FIXME: this is not maintained and needs a replacement
+Plug 'ChristianChiarulli/codi.vim'
+
 " Help
 Plug 'liuchengxu/vim-which-key'
 call plug#end()
